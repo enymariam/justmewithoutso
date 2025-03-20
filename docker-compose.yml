@@ -4,11 +4,8 @@ services:
         develop:
             watch:
                 - action: sync
-                  path: ./src
-                  target: /app/src
-                - action: sync
-                  path: ./server
-                  target: /app/server
+                  path: ./
+                  target: /app
         ports:
             - "3000:3000"
             - "5000:5000"
