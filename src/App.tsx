@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Gallery from "./components/Gallery";
 
 const App: React.FC = () => {
     const [data, setData] = useState<{ message: string } | null>(null);
@@ -14,6 +15,7 @@ const App: React.FC = () => {
     return (
         <div className="App">
             <h1>{data ? data.message : "Loading"}</h1>
+            <Gallery />
         </div>
     );
 };
