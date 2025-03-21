@@ -4,8 +4,6 @@
     "private": true,
     "dependencies": {
         "@testing-library/dom": "^10.4.0",
-        "@testing-library/jest-dom": "^6.6.3",
-        "@testing-library/react": "^16.2.0",
         "@testing-library/user-event": "^13.5.0",
         "@types/jest": "^27.5.2",
         "@types/node": "^16.18.126",
@@ -26,7 +24,7 @@
         "start:frontend": "react-scripts start",
         "start:backend": "node server/server.js",
         "build": "react-scripts build",
-        "test:frontend": "react-scripts test",
+        "test:frontend": "react-scripts test --transformIgnorePatterns",
         "test:backend": "jest --rootDir server",
         "test:all": "npm run test:backend && npm run test:frontend",
         "eject": "react-scripts eject"
@@ -50,7 +48,16 @@
         ]
     },
     "devDependencies": {
-        "jest": "^27.5.1",
-        "supertest": "^7.1.0"
+        "@babel/core": "^7.26.10",
+        "@babel/preset-env": "^7.26.9",
+        "@babel/preset-react": "^7.26.3",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.2.0",
+        "babel-jest": "^29.7.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "react-test-renderer": "^19.0.0",
+        "supertest": "^7.1.0",
+        "ts-jest": "^29.2.6"
     }
 }
