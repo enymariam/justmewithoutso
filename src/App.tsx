@@ -16,6 +16,7 @@ const App: React.FC = () => {
         <div className="App">
             <h1>{data ? data.message : "Loading"}</h1>
             <Gallery />
+            <p>Testing CI Pipeline</p>
         </div>
     );
 };
