@@ -17,15 +17,15 @@ jobs:
               with:
                   node-version: 18
                   cache: "npm"
-                  working-directory: backend
+                  working-directory: .
 
             - name: Install dependencies
               run: npm install
-              working-directory: backend
+              working-directory: .
 
-            - name: Run tests
+            - name: Run backend tests
               run: npm test:backend
-              working-directory: backend
+              working-directory: .
 
     frontend:
         runs-on: ubuntu-latest
@@ -38,12 +38,12 @@ jobs:
               with:
                   node-version: 18
                   cache: "npm"
-                  working-directory: frontend
+                  working-directory: .
 
             - name: Install dependencies
               run: npm install
-              working-directory: frontend
+              working-directory: .
 
-            - name: Run tests
+            - name: Run frontend tests
               run: npm test:frontend
-              working-directory: frontend
+              working-directory: .
