@@ -24,7 +24,7 @@ jobs:
               working-directory: .
 
             - name: Run backend tests
-              run: npm test:backend
+              run: npm run test:backend
               working-directory: .
 
     frontend:
@@ -45,5 +45,5 @@ jobs:
               working-directory: .
 
             - name: Run frontend tests
-              run: npm test:frontend
+              run: npm run test:frontend
               working-directory: .
