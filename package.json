@@ -1,5 +1,6 @@
 {
     "name": "justmewithoutso",
+    "homepage": "https://enymariam.github.io/justmewithoutso/",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -13,6 +14,7 @@
         "concurrently": "^9.1.2",
         "cors": "^2.8.5",
         "express": "^4.21.2",
+        "gh-pages": "^6.3.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-scripts": "5.0.1",
@@ -27,7 +29,9 @@
         "test:frontend": "react-scripts test --transformIgnorePatterns",
         "test:backend": "jest --rootDir server",
         "test:all": "npm run test:backend && npm run test:frontend",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
